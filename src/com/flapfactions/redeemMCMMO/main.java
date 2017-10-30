@@ -174,10 +174,13 @@ public class main extends JavaPlugin {
 						return true;
 					}
 				} else if(args.length == 1) {
-					String targetName = getConfig().getString(args[0]);
 					@SuppressWarnings("deprecation") // no issue as we are not saving the username
-					OfflinePlayer player2 = Bukkit.getOfflinePlayer(targetName);
+					OfflinePlayer player2 = Bukkit.getOfflinePlayer(args[0]);
+					
+					
+					
 					if(player2.hasPlayedBefore()) {
+						String targetName = getConfig().getString(player2.getUniqueId().toString());
 						if(targetName != null) {
 							int credits = getConfig().getInt(player2.getUniqueId().toString() + ".credits");
 							player.sendMessage(ChatColor.GOLD + args[0] + ChatColor.GREEN + " has " + ChatColor.GOLD + credits + ChatColor.GREEN + " MCMMO credits remaining.");
