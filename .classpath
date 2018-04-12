@@ -4,6 +4,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="//Arnoldv2/home$/adamxp12/Downloads/spigot-1.12.2.jar"/>
 	<classpathentry kind="lib" path="//Arnoldv2/home$/adamxp12/Downloads/Vault.jar"/>
-	<classpathentry kind="lib" path="//Arnoldv2/home$/adamxp12/Downloads/mcMMO (1).jar"/>
+	<classpathentry kind="lib" path="//Arnoldv2/home$/adamxp12/Downloads/mcMMO.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

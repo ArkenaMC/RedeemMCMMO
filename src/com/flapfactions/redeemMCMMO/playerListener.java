@@ -17,9 +17,9 @@ public class playerListener implements Listener {
 	public void onLogin(PlayerLoginEvent event) {
 		plugin = main.instance;
 		Player player = event.getPlayer();
-		File playerDat = new File("world/players/"+ player.getName() + ".dat");
-		if(!playerDat.exists()) {
-			String playerName = player.getName();
+		File playerDat = new File("world/players/"+ player.getUniqueId().toString() + ".dat");
+		if(!plugin.getConfig().contains(player.getUniqueId().toString())) {
+			String playerName = player.getUniqueId().toString();
 			int startupAmount = plugin.getConfig().getInt("startupAmount");
 			if(startupAmount == 0) {
 				//do nothing if startupAmount is 0
@@ -34,7 +34,7 @@ public class playerListener implements Listener {
 	public void onJoin(PlayerJoinEvent event) {
 		plugin = main.instance;
 		Player player = event.getPlayer();
-		int credits = plugin.getConfig().getInt(player.getName() + ".credits");
+		int credits = plugin.getConfig().getInt(player.getUniqueId().toString() + ".credits");
 		if(credits == 0) {
 			//do nothing!
 		} else {
